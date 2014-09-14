@@ -29,6 +29,10 @@
       <div class="post-image">
         <img src="/uploads/<%= post["img_file_name"] %>" alt="<%= post["img_file_name"] %>" class="ex-image">
       </div>
+      <div class="tools">
+        <a href="/star?post_id=<%= post["id"] %>">スターを増やす</a><br>
+        <span class="add-star"><%= post["star_count"] %></span>
+      </div>
     </div>
     <% end %>
   </div>
