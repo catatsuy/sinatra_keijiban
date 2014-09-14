@@ -6,7 +6,7 @@ $(function() {
       url: '/star?post_id=' + post_id,
       dataType: 'json',
       success: function(data) {
-        console.log(data['star_count']);
+        $this.text(data['star_count']);
       },
       error: function(data) {
         alert('失敗しました');
