@@ -1,6 +1,7 @@
 require 'sinatra'
 require 'sqlite3'
 require 'securerandom'
+require 'sinatra/json'
 
 db = SQLite3::Database.new "db/post.db"
 db.results_as_hash = true
@@ -50,7 +51,9 @@ get '/star' do
   stmt = db.prepare("UPDATE posts SET star_count = ? WHERE id = ?")
   stmt.bind_params(new_star_count, post_id)
   stmt.execute
-  return "スターを付けました"
+
+  response = { "star_count" => new_star_count }
+  json response
 end
 
 get '/hello' do
