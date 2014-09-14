@@ -15,5 +15,6 @@ For education
 
     CREATE TABLE posts (
       id INTEGER PRIMARY KEY,
-      text TEXT
+      text TEXT,
+      img_file_name TEXT
     );
