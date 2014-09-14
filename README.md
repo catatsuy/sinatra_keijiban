@@ -6,6 +6,7 @@ For education
 
     sudo gem install sinatra
     sudo gem install sqlite3
+    sudo gem install sinatra-contrib
 
 ## running
 
